@@ -1,0 +1,97 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  TypeChecking:
+    name: Typecheck TypeScript code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+      - name: Add problem matchers
+        run: echo "::add-matcher::.github/problemMatchers/tsc.json"
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          registry-url: https://registry.npmjs.org/
+      - name: Install Dependencies
+        run: yarn --immutable
+      - name: Run Type Checking
+        run: yarn typecheck
+
+  Style:
+    name: Style Reformat
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'  # Only run on push events
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          registry-url: https://registry.npmjs.org/
+      - name: Install Dependencies
+        run: yarn --immutable
+      - name: Prettier Format
+        run: yarn format
+      - name: Commit Changes
+        continue-on-error: true
+        run: |
+          NAME="yuan-utilities[bot]"
+          EMAIL="109896501+yuan-utilities[bot]@users.noreply.github.com"
+          git config --local committer.email "$EMAIL"
+          git config --local committer.name "$NAME"
+          git config --local author.email "$EMAIL"
+          git config --local author.name "$NAME"
+          git add -A
+          git commit -m "fix: style reformat"
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${GITHUB_REF#refs/heads/}
+
+  Linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+      - name: Add problem matchers
+        run: echo "::add-matcher::.github/problemMatchers/eslint.json"
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          registry-url: https://registry.npmjs.org/
+      - name: Install Dependencies
+        run: yarn --immutable
+      - name: Run Prettier
+        run: yarn format
+      - name: Run ESLint
+        run: yarn lint --fix=false
+
+  Building:
+    name: Build code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+      - name: Add problem matchers
+        run: echo "::add-matcher::.github/problemMatchers/tsc.json"
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          registry-url: https://registry.npmjs.org/
+      - name: Install Dependencies
+        run: yarn --immutable
+      - name: Build Code
+        run: yarn build

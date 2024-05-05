@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.iml
+.vs/
+
+.yarn/install-state.gz
+.yarn/build-state.yml
+
+data/
+.env
+
+.pm2/
+.npm/
+.cache/
+
+.turbo/

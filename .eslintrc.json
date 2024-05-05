@@ -1,0 +1,10 @@
+{
+	"extends": "@sapphire",
+	"rules": {
+		"@typescript-eslint/dot-notation": "off",
+		"@typescript-eslint/member-ordering": "off",
+		"@typescript-eslint/no-base-to-string": "off",
+		"@typescript-eslint/unbound-method": "off",
+		"no-negated-condition": "off"
+	}
+}
