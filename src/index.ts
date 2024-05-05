@@ -5,7 +5,7 @@ import { envParseString, setup } from '@skyra/env-utilities';
 import { ensureDirExists, ensureFileExists } from '#utils/ensureFileExists';
 import { Watcher } from '#utils/watcher';
 import { Time } from '@sapphire/duration';
-import KeyvSqlite from '@keyv/sqlite';
+import Keyv from 'keyv';
 
 setup(new URL('../.env', import.meta.url));
 
@@ -16,13 +16,13 @@ const ensuring = [
 
 await Promise.all(ensuring);
 
-const webhookOptions = {
+const webhookOptions: WebhookClientData = {
 	id: envParseString('WEBHOOK_ID'),
 	token: envParseString('WEBHOOK_TOKEN')
-} as WebhookClientData;
+};
 
-const logger = new Logger({ level: Logger.Level.Debug });
-const incidentData: KeyvSqlite<DataEntry> = new KeyvSqlite<DataEntry>('sqlie://../data/data.sqlite');
+const logger = new Logger({ level: Reflect.has(process.env, 'PM2_HOME') ? Logger.Level.Info : Logger.Level.Debug });
+const incidentData: Keyv<DataEntry> = new Keyv('sqlie://../data/data.sqlite', { adapter: 'sqlite' });
 const hook = new WebhookClient(webhookOptions);
 logger.info(`Starting with ${hook.id}`);
 

@@ -5,11 +5,11 @@ import { DateTime } from 'luxon';
 import { toTitleCase } from '@sapphire/utilities/toTitleCase';
 import type { Logger } from '@skyra/logger';
 import { Json, safeFetch } from '@skyra/safe-fetch';
-import KeyvSqlite from '@keyv/sqlite';
+import Keyv from 'keyv';
 
 export class Watcher {
 	public constructor(
-		public incidentData: KeyvSqlite<DataEntry>,
+		public incidentData: Keyv<DataEntry>,
 		public logger: Logger,
 		public hook: WebhookClient
 	) {}

@@ -12,11 +12,9 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc -b src",
-    "start": "node dist/index.js",
-    "start:tsx": "tsx --tsconfig src/tsconfig.json src/index.ts",
+    "start": "tsx --tsconfig src/tsconfig.json src/index.ts",
     "start:pm2": "pm2 start ecosystem.config.cjs",
-    "lint": "eslint src --ext ts",
-    "lint:fix": "eslint src --ext ts --fix",
+    "lint": "eslint src --ext ts --fix",
     "format": "prettier src --write",
     "typecheck": "tsc -b src",
     "update": "yarn upgrade-interactive"
