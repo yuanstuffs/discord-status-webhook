@@ -2,7 +2,7 @@
 	"extends": ["@sapphire/ts-config", "@sapphire/ts-config/extra-strict", "@sapphire/ts-config/verbatim"],
 	"compilerOptions": {
 		"incremental": false,
-		"noEmit": false,
+		"noEmit": true,
 		"resolvePackageJsonImports": true,
 		"skipLibCheck": true
 	}

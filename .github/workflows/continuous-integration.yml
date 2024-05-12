@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
       - name: Run Type Checking
-        run: yarn typecheck
+        run: yarn build
 
   Style:
     name: Style Reformat

@@ -11,12 +11,11 @@
     "#root/*": "./dist/*.js"
   },
   "scripts": {
-    "build": "rimraf dist && tsc -b src",
+    "build": "tsc -b src",
     "start": "tsx --tsconfig src/tsconfig.json src/index.ts",
     "start:pm2": "pm2 start ecosystem.config.cjs",
     "lint": "eslint src --ext ts --fix",
     "format": "prettier src --write",
-    "typecheck": "tsc -b src",
     "update": "yarn upgrade-interactive"
   },
   "devDependencies": {
