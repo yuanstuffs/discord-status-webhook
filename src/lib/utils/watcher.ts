@@ -1,5 +1,5 @@
 import { API_BASE, EmbedColor } from '#lib/constants';
-import type { DataEntry, StatusPageIncident, StatusPageResult } from '#lib/types';
+import type { DataEntry, StatusPageIncident, StatusPageResult, StatusPageIncidentStatus } from '#lib/types';
 import { EmbedBuilder, type APIEmbedField, type WebhookClient } from 'discord.js';
 import { DateTime } from 'luxon';
 import { toTitleCase } from '@sapphire/utilities/toTitleCase';
@@ -15,16 +15,7 @@ export class Watcher {
 	) {}
 
 	public embedFromIncident(incident: StatusPageIncident): EmbedBuilder {
-		const color =
-			incident.status === 'resolved' || incident.status === 'postmortem'
-				? EmbedColor.GREEN
-				: incident.impact === 'critical'
-					? EmbedColor.RED
-					: incident.impact === 'major'
-						? EmbedColor.ORANGE
-						: incident.impact === 'minor'
-							? EmbedColor.YELLOW
-							: EmbedColor.BLACK;
+		const color = this.resolveEmbedColor(incident);
 
 		const affectedNames = incident.components.map((c) => c.name);
 
@@ -53,8 +44,9 @@ export class Watcher {
 		return embed;
 	}
 
-	public isResolvedStatus(status: string) {
-		return ['resolved', 'postmortem'].some((stat) => stat === status);
+	public isResolvedStatus(status: StatusPageIncidentStatus) {
+		const resolvedStatus: StatusPageIncidentStatus[] = ['resolved', 'postmortem'];
+		return resolvedStatus.some((stat) => stat === status);
 	}
 
 	public async updateIncident(incident: StatusPageIncident, messageID?: string) {
@@ -81,7 +73,7 @@ export class Watcher {
 		this.logger.info('heartbeat');
 		try {
 			const result = await Json<StatusPageResult>(safeFetch(`${API_BASE}/incidents.json`));
-			if (result.isErr()) throw new Error('a');
+			if (result.isErr()) throw new Error('Failed to fetch the incidents json file');
 			const { incidents } = result.unwrap();
 
 			for (const incident of incidents.reverse()) {
@@ -104,6 +96,22 @@ export class Watcher {
 			}
 		} catch (error) {
 			this.logger.error(`Error during fetch and update routine:\n`, error);
+		}
+	}
+
+	private resolveEmbedColor(incident: StatusPageIncident) {
+		const resolvedStatus = this.isResolvedStatus(incident.status);
+		if (resolvedStatus) return EmbedColor.Green;
+
+		switch (incident.impact) {
+			case 'critical':
+				return EmbedColor.Red;
+			case 'major':
+				return EmbedColor.Orange;
+			case 'minor':
+				return EmbedColor.Yellow;
+			case 'none':
+				return EmbedColor.Black;
 		}
 	}
 }
