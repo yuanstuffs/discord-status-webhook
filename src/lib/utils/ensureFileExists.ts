@@ -3,7 +3,7 @@ import { Result } from '@sapphire/result';
 import { type PathLike, constants } from 'node:fs';
 
 export async function ensureDirExists(path: PathLike) {
-	const result = await Result.fromAsync(() => access(path, constants.F_OK));
+	const result = await accessResult(path);
 
 	return result.match({
 		err: async () => {
@@ -15,7 +15,7 @@ export async function ensureDirExists(path: PathLike) {
 }
 
 export async function ensureFileExists(path: PathLike) {
-	const result = await Result.fromAsync(() => access(path, constants.F_OK));
+	const result = await accessResult(path);
 
 	return result.match({
 		err: async () => {
@@ -24,4 +24,9 @@ export async function ensureFileExists(path: PathLike) {
 		},
 		ok: () => true
 	});
+}
+
+function accessResult(...[path, mode]: Parameters<typeof access>) {
+	mode ??= constants.F_OK;
+	return Result.fromAsync(() => access(path, mode));
 }
