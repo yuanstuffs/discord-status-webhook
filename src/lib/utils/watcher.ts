@@ -39,7 +39,7 @@ export class Watcher {
 			descriptionParts.push(`• Affected Components: ${affectedNames.join(', ')}`);
 		}
 
-		embed.setDescription(descriptionParts.join('\n'));
+		embed.setDescription(descriptionParts.join('\n')).setFields(fields);
 
 		return embed;
 	}
