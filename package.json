@@ -23,13 +23,13 @@
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.4.2",
     "@types/node": "20.11.1",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
-    "tsx": "^4.16.2",
+    "tsx": "^4.16.5",
     "typescript": "^5.5.2"
   },
   "dependencies": {
@@ -51,5 +51,5 @@
   ],
   "author": "Souji <timoqueezle@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.4.0"
 }
