@@ -340,12 +340,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keyv/sqlite@npm:^3.6.7":
-  version: 3.6.7
-  resolution: "@keyv/sqlite@npm:3.6.7"
+"@keyv/sqlite@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@keyv/sqlite@npm:4.0.1"
   dependencies:
     sqlite3: "npm:^5.1.7"
-  checksum: 10c0/a217161de4bb26197fd4228a93559eb0dbe1ed754e6a2902a21f606a6b6effce2b3d03ead690d7c83ece4da31e618fe0e5a1225241fe9248578cb6e33e828acc
+  checksum: 10c0/75fa7e6e2bd84c2b49f5c586a72f07454be328e37c3d23a17a6851d4ed4d8235a4bc3a6e33ab7c29a199dec8243e6ae9e6d6d3652c76cd18dd03a532f1403599
   languageName: node
   linkType: hard
 
@@ -1127,7 +1127,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "discord-status-webhook@workspace:."
   dependencies:
-    "@keyv/sqlite": "npm:^3.6.7"
+    "@keyv/sqlite": "npm:^4.0.1"
     "@sapphire/duration": "npm:^1.1.2"
     "@sapphire/eslint-config": "npm:^5.0.5"
     "@sapphire/ts-config": "npm:^5.0.1"
