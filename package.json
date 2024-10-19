@@ -51,5 +51,5 @@
   ],
   "author": "Souji <timoqueezle@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.5.1"
 }
