@@ -1,10 +1,11 @@
-import { WebhookClient, type WebhookClientData } from 'discord.js';
 import type { DataEntry } from '#lib/types';
-import { Logger } from '@skyra/logger';
-import { envParseString, setup } from '@skyra/env-utilities';
 import { ensureDirExists, ensureFileExists } from '#utils/ensureFileExists';
 import { Watcher } from '#utils/watcher';
+import KeyvSqlite from '@keyv/sqlite';
 import { Time } from '@sapphire/duration';
+import { envParseString, setup } from '@skyra/env-utilities';
+import { Logger } from '@skyra/logger';
+import { WebhookClient, type WebhookClientData } from 'discord.js';
 import Keyv from 'keyv';
 
 setup(new URL('../.env', import.meta.url));
@@ -22,7 +23,7 @@ const webhookOptions: WebhookClientData = {
 };
 
 const logger = new Logger({ level: Reflect.has(process.env, 'PM2_HOME') ? Logger.Level.Info : Logger.Level.Debug });
-const incidentData: Keyv<DataEntry> = new Keyv('sqlie://../data/data.sqlite', { adapter: 'sqlite' });
+const incidentData = new Keyv<DataEntry>(new KeyvSqlite('sqlie://../data/data.sqlite'));
 const hook = new WebhookClient(webhookOptions);
 logger.info(`Starting with ${hook.id}`);
 
