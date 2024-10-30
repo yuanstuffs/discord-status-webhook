@@ -9,6 +9,7 @@ import { WebhookClient, type WebhookClientData } from 'discord.js';
 import Keyv from 'keyv';
 
 setup(new URL('../src/.env', import.meta.url));
+const production = envParseString('NODE_ENV') === 'production';
 
 const ensuring = [
 	ensureDirExists(new URL('../data/', import.meta.url)), //
@@ -22,7 +23,7 @@ const webhookOptions: WebhookClientData = {
 	token: envParseString('WEBHOOK_TOKEN')
 };
 
-const logger = new Logger({ level: Reflect.has(process.env, 'PM2_HOME') ? Logger.Level.Info : Logger.Level.Debug });
+const logger = new Logger({ level: production ? Logger.Level.Info : Logger.Level.Debug });
 const incidentData = new Keyv<DataEntry>(new KeyvSqlite('sqlie://../data/data.sqlite'));
 const hook = new WebhookClient(webhookOptions);
 logger.info(`Starting with ${hook.id}`);
