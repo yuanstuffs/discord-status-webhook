@@ -8,7 +8,7 @@ import { Logger } from '@skyra/logger';
 import { WebhookClient, type WebhookClientData } from 'discord.js';
 import Keyv from 'keyv';
 
-setup(new URL('../.env', import.meta.url));
+setup(new URL('../src/.env', import.meta.url));
 
 const ensuring = [
 	ensureDirExists(new URL('../data/', import.meta.url)), //

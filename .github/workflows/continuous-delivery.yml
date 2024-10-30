@@ -1,0 +1,38 @@
+# Copied from
+# https://github.com/skyra-project/teryl/blob/adb7ae587a91ba48b54b5ec38b5ec2297e3e7953/.github/workflows/continuous-delivery.yml
+name: Continuous Delivery
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'Dockerfile'
+      - '.github/workflows/continuous-delivery.yml'
+      - 'package.json'
+
+jobs:
+  PublishTeryl:
+    name: Publish image to container registries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3.7.1
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3.3.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6.9.0
+        with:
+          push: true
+          context: .
+          tags: ghcr.io/yuanstuffs/discord-status-webhook:latest

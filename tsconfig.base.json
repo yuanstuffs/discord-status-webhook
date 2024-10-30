@@ -1,8 +1,8 @@
 {
 	"extends": ["@sapphire/ts-config", "@sapphire/ts-config/extra-strict", "@sapphire/ts-config/verbatim"],
 	"compilerOptions": {
-		"incremental": false,
-		"noEmit": true,
+		"incremental": true,
+		"noEmit": false,
 		"resolvePackageJsonImports": true,
 		"skipLibCheck": true
 	}

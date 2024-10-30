@@ -11,9 +11,8 @@
     "#root/*": "./dist/*.js"
   },
   "scripts": {
-    "build": "tsc -b src",
-    "start": "tsx --tsconfig src/tsconfig.json src/index.ts",
-    "start:pm2": "pm2 start ecosystem.config.cjs",
+    "build": "rimraf dist && tsc -b src",
+    "start": "node dist/index.js",
     "lint": "eslint src --ext ts --fix",
     "format": "prettier src --write",
     "update": "yarn upgrade-interactive"
@@ -29,7 +28,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
-    "tsx": "^4.19.2",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.2"
   },
   "dependencies": {
@@ -50,6 +49,9 @@
     "discordapp"
   ],
   "author": "Souji <timoqueezle@gmail.com>",
+  "contributors": [
+    "yuansheng <yuansheng1515@icloud.com>"
+  ],
   "license": "MIT",
   "packageManager": "yarn@4.5.1"
 }
