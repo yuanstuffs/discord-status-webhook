@@ -1,0 +1,10 @@
+services:
+  discord-status-webhook:
+    container_name: discord-status-webhook
+    build:
+      context: ./
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    volumes:
+      - ./data/:/usr/src/data/
