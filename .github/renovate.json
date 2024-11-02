@@ -1,14 +1,18 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>yuanstuffs/configs:yuanstuffs-renovate"],
+    "extends": [
+        "github>yuanstuffs/configs:yuanstuffs-renovate"
+    ],
     "npm": {
         "packageRules": [
             {
-				"matchPackagePatterns": ["@types/node"],
-				"allowedVersions": "^22",
-				"automerge": true,
-				"automergeStrategy": "rebase"
-			}
+                "allowedVersions": "^22",
+                "automerge": true,
+                "automergeStrategy": "rebase",
+                "matchPackageNames": [
+                    "/@types/node/"
+                ]
+            }
         ]
     }
 }
