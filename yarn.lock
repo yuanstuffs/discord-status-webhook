@@ -999,7 +999,7 @@ __metadata:
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.2.1"
-    keyv: "npm:^5.1.3"
+    keyv: "npm:^5.2.1"
     luxon: "npm:^3.5.0"
     prettier: "npm:^3.3.3"
     rimraf: "npm:^6.0.1"
@@ -1818,12 +1818,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyv@npm:^5.1.3":
-  version: 5.1.3
-  resolution: "keyv@npm:5.1.3"
+"keyv@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "keyv@npm:5.2.1"
   dependencies:
     "@keyv/serialize": "npm:*"
-  checksum: 10c0/14480e508b99498b0b3d90398aec67ceeb2a4d8137408b00f4d110297bba89dfb7e9832dde1ebb9f0583366937500b22f24d5de344c850ec6fcbb8d9fba84205
+  checksum: 10c0/95c986a4785bd169c1545c8263662c3e898dc446c4acd9640598ca454075b9dea73559909dded6b23df0a247031d101df84a757bb6db08bbfe06499896e494fc
   languageName: node
   linkType: hard
 
