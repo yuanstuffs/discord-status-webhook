@@ -14,7 +14,7 @@ on:
       - 'package.json'
 
 jobs:
-  PublishTeryl:
+  PublishDockerImage:
     name: Publish image to container registries
     runs-on: ubuntu-latest
     steps:
