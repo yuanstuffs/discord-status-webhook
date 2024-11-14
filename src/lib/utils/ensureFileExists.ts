@@ -9,7 +9,7 @@ export async function ensureFileExists(path: URL) {
 
 	return result.match({
 		err: async () => {
-			console.log('Data directory is not found. Creating the directory right now...');
+			console.log('Data directory could not be found. Creating the directory right now...');
 			await mkdir(dirname(cleanPath), { recursive: true });
 			await appendFile(path, new Uint8Array(Buffer.from('')), { encoding: 'utf8' });
 		},
