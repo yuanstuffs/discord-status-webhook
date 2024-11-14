@@ -1,31 +1,35 @@
 import type { DataEntry } from '#lib/types';
-import { ensureDirExists, ensureFileExists } from '#utils/ensureFileExists';
+import { ensureFileExists } from '#utils/ensureFileExists';
 import { Watcher } from '#utils/watcher';
 import KeyvSqlite from '@keyv/sqlite';
 import { Time } from '@sapphire/duration';
 import { envParseString, setup } from '@skyra/env-utilities';
 import { Logger } from '@skyra/logger';
-import { WebhookClient, type WebhookClientData } from 'discord.js';
+import { WebhookClient } from 'discord.js';
 import Keyv from 'keyv';
+
+const dataPath = '../data/data.sqlite';
+await ensureFileExists(new URL(dataPath, import.meta.url));
 
 setup(new URL('../src/.env', import.meta.url));
 const production = envParseString('NODE_ENV') === 'production';
 
-const ensuring = [
-	ensureDirExists(new URL('../data/', import.meta.url)), //
-	ensureFileExists(new URL('../data/data.sqlite', import.meta.url))
-];
+/**
+ * The purpose of doing "sqlie" instead of "sqlite" is because of error 14 (cannot open database file).
+ * Somehow doing "sqlie" makes sqlite read and write the database file without any errors.
+ */
+const incidentData = new Keyv<DataEntry>(new KeyvSqlite(`sqlie://${dataPath}`));
 
-await Promise.all(ensuring);
+const logger = new Logger({
+	depth: 2,
+	level: production ? Logger.Level.Info : Logger.Level.Debug
+});
 
-const webhookOptions: WebhookClientData = {
+const hook = new WebhookClient({
 	id: envParseString('WEBHOOK_ID'),
 	token: envParseString('WEBHOOK_TOKEN')
-};
+});
 
-const logger = new Logger({ level: production ? Logger.Level.Info : Logger.Level.Debug });
-const incidentData = new Keyv<DataEntry>(new KeyvSqlite('sqlie://../data/data.sqlite'));
-const hook = new WebhookClient(webhookOptions);
 logger.info(`Starting with ${hook.id}`);
 
 const watcher = new Watcher(incidentData, logger, hook);

@@ -1,32 +1,18 @@
-import { access, appendFile, mkdir } from 'node:fs/promises';
 import { Result } from '@sapphire/result';
-import { type PathLike, constants } from 'node:fs';
+import { constants } from 'node:fs';
+import { access, appendFile, mkdir } from 'node:fs/promises';
+import { dirname } from 'node:path';
 
-export async function ensureDirExists(path: PathLike) {
-	const result = await accessResult(path);
-
-	return result.match({
-		err: async () => {
-			await mkdir(path);
-			return false;
-		},
-		ok: () => true
-	});
-}
-
-export async function ensureFileExists(path: PathLike) {
-	const result = await accessResult(path);
+export async function ensureFileExists(path: URL) {
+	const cleanPath = path.href.replace(/^file:\/\//, '').slice(1);
+	const result = await Result.fromAsync(() => access(path, constants.F_OK));
 
 	return result.match({
 		err: async () => {
+			console.log('Data directory is not found. Creating the directory right now...');
+			await mkdir(dirname(cleanPath), { recursive: true });
 			await appendFile(path, new Uint8Array(Buffer.from('')), { encoding: 'utf8' });
-			return false;
 		},
 		ok: () => true
 	});
-}
-
-function accessResult(...[path, mode]: Parameters<typeof access>) {
-	mode ??= constants.F_OK;
-	return Result.fromAsync(() => access(path, mode));
 }
