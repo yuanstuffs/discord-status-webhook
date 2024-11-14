@@ -26,36 +26,6 @@ jobs:
       - name: Run Type Checking
         run: yarn build
 
-  Style:
-    name: Style Reformat
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'  # Only run on push events
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v4
-      - name: Use Node.js v20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: yarn
-          registry-url: https://registry.npmjs.org/
-      - name: Install Dependencies
-        run: yarn --immutable
-      - name: Prettier Format
-        run: yarn format
-      - name: Commit Changes
-        continue-on-error: true
-        run: |
-          NAME="yuan-utilities[bot]"
-          EMAIL="109896501+yuan-utilities[bot]@users.noreply.github.com"
-          git config --local committer.email "$EMAIL"
-          git config --local committer.name "$NAME"
-          git config --local author.email "$EMAIL"
-          git config --local author.name "$NAME"
-          git add -A
-          git commit -m "fix: style reformat"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${GITHUB_REF#refs/heads/}
-
   Linting:
     name: Linting
     runs-on: ubuntu-latest
