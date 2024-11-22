@@ -18,6 +18,18 @@
     "update": "yarn upgrade-interactive",
     "scripts:setdata": "node --import tsx scripts/setData.mts"
   },
+  "dependencies": {
+    "@keyv/sqlite": "^4.0.1",
+    "@sapphire/duration": "^1.1.4",
+    "@sapphire/utilities": "^3.18.1",
+    "@skyra/env-utilities": "^1.3.0",
+    "@skyra/logger": "^2.0.3",
+    "@skyra/safe-fetch": "^1.1.3",
+    "discord.js": "^14.16.3",
+    "keyv": "^5.2.1",
+    "luxon": "^3.5.0",
+    "tsx": "^4.19.2"
+  },
   "devDependencies": {
     "@sapphire/eslint-config": "^5.0.5",
     "@sapphire/ts-config": "^5.0.1",
@@ -31,18 +43,6 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.2"
-  },
-  "dependencies": {
-    "@keyv/sqlite": "^4.0.1",
-    "@sapphire/duration": "^1.1.4",
-    "@sapphire/utilities": "^3.18.1",
-    "@skyra/env-utilities": "^1.3.0",
-    "@skyra/logger": "^2.0.3",
-    "@skyra/safe-fetch": "^1.1.3",
-    "discord.js": "^14.16.3",
-    "keyv": "^5.2.1",
-    "luxon": "^3.5.0",
-    "tsx": "^4.19.2"
   },
   "keywords": [
     "discord",
