@@ -30,8 +30,8 @@ const hook = new WebhookClient({
 	token: envParseString('WEBHOOK_TOKEN')
 });
 
-logger.info(`Starting with ${hook.id}`);
 logger.debug('Enabled debugging logger.');
+logger.info(`Starting with ${hook.id}`);
 
 const watcher = new Watcher(incidentData, logger, hook);
 
