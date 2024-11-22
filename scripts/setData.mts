@@ -33,7 +33,7 @@ if (incidentsResult.isErr()) {
 
 const foundIncident = incidentsResult.unwrap().find((incident) => incident.id === id);
 if (!foundIncident) {
-	console.error('Could not the incident data with the id:', id);
+	console.error('Could not find the incident data with the id:', id);
 	process.exit(1);
 }
 
