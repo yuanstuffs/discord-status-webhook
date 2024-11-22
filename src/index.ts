@@ -31,7 +31,7 @@ const hook = new WebhookClient({
 });
 
 logger.info(`Starting with ${hook.id}`);
-logger.debug('Enabled debug logger.');
+logger.debug('Enabled debugging logger.');
 
 const watcher = new Watcher(incidentData, logger, hook);
 
