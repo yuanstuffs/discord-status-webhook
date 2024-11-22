@@ -3,7 +3,7 @@ import { ensureFileExists } from '#utils/ensureFileExists';
 import { Watcher } from '#utils/watcher';
 import KeyvSqlite from '@keyv/sqlite';
 import { Time } from '@sapphire/duration';
-import { envParseString, setup } from '@skyra/env-utilities';
+import { envParseBoolean, envParseString, setup } from '@skyra/env-utilities';
 import { Logger } from '@skyra/logger';
 import { WebhookClient } from 'discord.js';
 import Keyv from 'keyv';
@@ -12,7 +12,7 @@ const dataPath = '../data/data.sqlite';
 await ensureFileExists(new URL(dataPath, import.meta.url));
 
 setup(new URL('../src/.env', import.meta.url));
-const production = envParseString('NODE_ENV') === 'production';
+const enableDebug = envParseString('NODE_ENV') !== 'production' || envParseBoolean('ENABLE_DEBUG');
 
 /**
  * The purpose of doing "sqlie" instead of "sqlite" is because of error 14 (cannot open database file).
@@ -22,7 +22,7 @@ const incidentData = new Keyv<DataEntry>(new KeyvSqlite(`sqlie://${dataPath}`));
 
 const logger = new Logger({
 	depth: 2,
-	level: production ? Logger.Level.Info : Logger.Level.Debug
+	level: enableDebug ? Logger.Level.Debug : Logger.Level.Info
 });
 
 const hook = new WebhookClient({

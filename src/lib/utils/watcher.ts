@@ -1,11 +1,11 @@
 import { API_BASE, EmbedColor } from '#lib/constants';
-import type { DataEntry, StatusPageIncident, StatusPageResult, StatusPageIncidentStatus } from '#lib/types';
-import { EmbedBuilder, type APIEmbedField, type WebhookClient } from 'discord.js';
-import { DateTime } from 'luxon';
+import type { DataEntry, StatusPageIncident, StatusPageIncidentStatus, StatusPageResult } from '#lib/types';
 import { toTitleCase } from '@sapphire/utilities/toTitleCase';
 import type { Logger } from '@skyra/logger';
 import { Json, safeFetch } from '@skyra/safe-fetch';
+import { EmbedBuilder, type APIEmbedField, type WebhookClient } from 'discord.js';
 import Keyv from 'keyv';
+import { DateTime } from 'luxon';
 
 export class Watcher {
 	public constructor(
@@ -72,31 +72,35 @@ export class Watcher {
 	public async check() {
 		this.logger.info('heartbeat');
 		try {
-			const result = await Json<StatusPageResult>(safeFetch(`${API_BASE}/incidents.json`));
+			const result = await this.fetchIncidents();
 			if (result.isErr()) throw new Error('Failed to fetch the incidents json file');
-			const { incidents } = result.unwrap();
+			const incidents = result.unwrap();
 
-			for (const incident of incidents.reverse()) {
+			for (const incident of incidents) {
 				const data = await this.incidentData.get(incident.id);
 				if (!data) {
-					if (this.isResolvedStatus(incident.status)) {
-						continue;
-					}
+					if (this.isResolvedStatus(incident.status)) continue;
 
 					this.logger.info(`New incident: ${incident.id}`);
-					void this.updateIncident(incident);
+					await this.updateIncident(incident);
 					continue;
 				}
 
 				const incidentUpdate = DateTime.fromISO(incident.updated_at ?? incident.created_at);
 				if (DateTime.fromISO(data.lastUpdate) < incidentUpdate) {
 					this.logger.info(`Update incident: ${incident.id}`);
-					void this.updateIncident(incident, data.messageId);
+					await this.updateIncident(incident, data.messageId);
 				}
 			}
 		} catch (error) {
 			this.logger.error(`Error during fetch and update routine:\n`, error);
 		}
+	}
+
+	public async fetchIncidents() {
+		const res = await Json<StatusPageResult>(safeFetch(`${API_BASE}/incidents.json`));
+
+		return res.map((data) => data.incidents.reverse());
 	}
 
 	private resolveEmbedColor(incident: StatusPageIncident) {
