@@ -12,7 +12,7 @@ const dataPath = '../data/data.sqlite';
 await ensureFileExists(new URL(dataPath, import.meta.url));
 
 setup(new URL('../src/.env', import.meta.url));
-const enableDebug = envParseString('NODE_ENV') !== 'production' || envParseBoolean('ENABLE_DEBUG');
+const enableDebug = envParseString('NODE_ENV') !== 'production' || envParseBoolean('ENABLE_DEBUG', false);
 
 /**
  * The purpose of doing "sqlie" instead of "sqlite" is because of error 14 (cannot open database file).
