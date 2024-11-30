@@ -34,13 +34,13 @@
     "@sapphire/eslint-config": "^5.0.5",
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.4.2",
-    "@types/node": "22.9.3",
+    "@types/node": "22.10.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.2"
   },
@@ -55,5 +55,5 @@
     "yuansheng <yuansheng1515@icloud.com>"
   ],
   "license": "MIT",
-  "packageManager": "yarn@4.5.2"
+  "packageManager": "yarn@4.5.3"
 }
