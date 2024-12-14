@@ -340,7 +340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keyv/serialize@npm:*":
+"@keyv/serialize@npm:^1.0.1":
   version: 1.0.1
   resolution: "@keyv/serialize@npm:1.0.1"
   dependencies:
@@ -553,12 +553,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.10.1":
-  version: 22.10.1
-  resolution: "@types/node@npm:22.10.1"
+"@types/node@npm:*, @types/node@npm:22.10.2":
+  version: 22.10.2
+  resolution: "@types/node@npm:22.10.2"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/0fbb6d29fa35d807f0223a4db709c598ac08d66820240a2cd6a8a69b8f0bc921d65b339d850a666b43b4e779f967e6ed6cf6f0fca3575e08241e6b900364c234
+  checksum: 10c0/2c7b71a040f1ef5320938eca8ebc946e6905caa9bbf3d5665d9b3774a8d15ea9fab1582b849a6d28c7fc80756a62c5666bc66b69f42f4d5dafd1ccb193cdb4ac
   languageName: node
   linkType: hard
 
@@ -1160,14 +1160,14 @@ __metadata:
     "@skyra/logger": "npm:^2.0.3"
     "@skyra/safe-fetch": "npm:^1.1.3"
     "@types/luxon": "npm:^3.4.2"
-    "@types/node": "npm:22.10.1"
+    "@types/node": "npm:22.10.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     discord.js: "npm:^14.16.3"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.2.1"
-    keyv: "npm:^5.2.1"
+    keyv: "npm:^5.2.2"
     luxon: "npm:^3.5.0"
     prettier: "npm:^3.4.2"
     rimraf: "npm:^6.0.1"
@@ -2098,12 +2098,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyv@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "keyv@npm:5.2.1"
+"keyv@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "keyv@npm:5.2.2"
   dependencies:
-    "@keyv/serialize": "npm:*"
-  checksum: 10c0/95c986a4785bd169c1545c8263662c3e898dc446c4acd9640598ca454075b9dea73559909dded6b23df0a247031d101df84a757bb6db08bbfe06499896e494fc
+    "@keyv/serialize": "npm:^1.0.1"
+  checksum: 10c0/6f9cc97c9ecacb90304fd15be7f829c50b944748d644319931ca718828df9fd1eb76ed963be7996fc249fab22230d319f61d51ee63b04b384186a6b3fe032e06
   languageName: node
   linkType: hard
 
