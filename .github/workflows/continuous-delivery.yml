@@ -35,4 +35,6 @@ jobs:
         with:
           push: true
           context: .
-          tags: ghcr.io/yuanstuffs/discord-status-webhook:latest
+          tags: |
+            ghcr.io/yuanstuffs/discord-status-webhook:latest
+            ghcr.io/yuanstuffs/discord-status-webhook:${{ github.sha }}
