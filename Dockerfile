@@ -54,8 +54,11 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/dist dist/
 COPY --from=builder /usr/src/app/src/.env src/.env
 
+RUN apk add --no-cache --virtual .build-deps g++ make
+
 RUN yarn workspaces focus --all --production
 
+RUN apk del .build-deps
 RUN rm -rf .yarn/cache
 
 CMD [ "yarn", "run", "start" ]
