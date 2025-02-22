@@ -33,6 +33,9 @@ ENV NODE_ENV="development"
 COPY tsconfig.base.json .
 COPY src/ src/
 
+RUN apk add --update \
+			&& apk add --no-cache --virtual .build-deps python g++
+
 RUN yarn install --immutable
 RUN yarn run build
 
