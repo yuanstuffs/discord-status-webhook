@@ -13,7 +13,8 @@ ENV CI=true
 ENV LOG_LEVEL=info
 ENV FORCE_COLOR=true
 
-RUN apk add --no-cache dumb-init python3 py3-setuptools
+RUN apk add --no-cache dumb-init python3 py3-setuptools && \
+		apk add --no-cache --virtual .build-deps g++ make
 
 COPY yarn.lock .
 COPY package.json .
@@ -54,11 +55,10 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/dist dist/
 COPY --from=builder /usr/src/app/src/.env src/.env
 
-RUN apk add --no-cache --virtual .build-deps g++ make
+COPY --from=builder /usr/src/app/node_modules/sqlite3 node_modules/sqlite3/
 
 RUN yarn workspaces focus --all --production
 
-RUN apk del .build-deps
 RUN rm -rf .yarn/cache
 
 CMD [ "yarn", "run", "start" ]
