@@ -13,8 +13,7 @@ ENV CI=true
 ENV LOG_LEVEL=info
 ENV FORCE_COLOR=true
 
-RUN apk add --no-cache dumb-init python3 py3-setuptools && \
-		apk add --no-cache --virtual .build-deps g++ make
+RUN apk add --no-cache dumb-init python3 py3-setuptools
 
 COPY yarn.lock .
 COPY package.json .
