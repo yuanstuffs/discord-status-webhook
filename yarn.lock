@@ -347,12 +347,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keyv/serialize@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@keyv/serialize@npm:1.0.2"
+"@keyv/serialize@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@keyv/serialize@npm:1.0.3"
   dependencies:
     buffer: "npm:^6.0.3"
-  checksum: 10c0/31c5cb0938d22ce890314befc4d00c248c4c9be9664885978d6449b1787993dbc91999041076d53437888bb5f4280233276fbc4c72f97955d111d7a6ccd4cd67
+  checksum: 10c0/24a257870b0548cfe430680c2ae1641751e6a6ec90c573eaf51bfe956839b6cfa462b4d2827157363b6d620872d32d69fa2f37210a864ba488f8ec7158436398
   languageName: node
   linkType: hard
 
@@ -1160,7 +1160,7 @@ __metadata:
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.0.2"
     eslint-plugin-prettier: "npm:^5.2.3"
-    keyv: "npm:^5.2.3"
+    keyv: "npm:^5.3.0"
     luxon: "npm:^3.5.0"
     prettier: "npm:^3.5.2"
     rimraf: "npm:^6.0.1"
@@ -2105,12 +2105,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyv@npm:^5.2.3":
-  version: 5.2.3
-  resolution: "keyv@npm:5.2.3"
+"keyv@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "keyv@npm:5.3.0"
   dependencies:
-    "@keyv/serialize": "npm:^1.0.2"
-  checksum: 10c0/76b87dd2c21a4c1c5c05e9ff3b85670beab98f153429aaa9aee544b72b65411a7d80d96c29f3fef3e9dcebb672c8268e7209d6f80beb5da939b4e019722948b4
+    "@keyv/serialize": "npm:^1.0.3"
+  checksum: 10c0/1f6f20fbdf4227d641dc4b55741986c0f370e1382d5a66deb905fa291c1c4052cfd3a9db9abda7587f35836d33f97ad5eaff87d68c78ca149e589726221aa848
   languageName: node
   linkType: hard
 
