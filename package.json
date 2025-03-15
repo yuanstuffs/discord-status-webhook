@@ -22,7 +22,7 @@
     "@keyv/sqlite": "^4.0.1",
     "@sapphire/duration": "^1.1.4",
     "@sapphire/utilities": "^3.18.2",
-    "@skyra/env-utilities": "^1.3.0",
+    "@skyra/env-utilities": "^2.0.0",
     "@skyra/logger": "^2.0.3",
     "@skyra/safe-fetch": "^1.1.3",
     "discord.js": "^14.18.0",
