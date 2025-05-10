@@ -31,15 +31,15 @@
     "tsx": "^4.19.4"
   },
   "devDependencies": {
-    "@sapphire/eslint-config": "^5.0.5",
+    "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.6.2",
-    "@types/node": "22.15.3",
+    "@types/node": "22.15.17",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.2"
