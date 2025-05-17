@@ -19,7 +19,7 @@
     "scripts:setdata": "node --import tsx scripts/setData.mts"
   },
   "dependencies": {
-    "@keyv/sqlite": "^4.0.3",
+    "@keyv/sqlite": "^4.0.4",
     "@sapphire/duration": "^1.2.0",
     "@sapphire/utilities": "^3.18.2",
     "@skyra/env-utilities": "^2.0.0",
@@ -34,7 +34,7 @@
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.6.2",
-    "@types/node": "22.15.17",
+    "@types/node": "22.15.18",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
