@@ -356,14 +356,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keyv/sqlite@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@keyv/sqlite@npm:4.0.3"
+"@keyv/sqlite@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "@keyv/sqlite@npm:4.0.4"
   dependencies:
     sqlite3: "npm:^5.1.7"
   peerDependencies:
     keyv: ^5.3.3
-  checksum: 10c0/cef116108bc9d6f29dee99d7824eb19cdc7f853c58d63241148d66f268c1b77fb2eb051697b157fc16373b9b46bc8e2dd221e76534996ec804bbbdc65136d6d9
+  checksum: 10c0/7d555ec42c05d170b4a81e7ba2ce892533b0660ce9e1897d5080d0cf31cb01464b8b1bf41d6d4bd7717672135274eb6f5a0ac3932d70a33a961a43eeee95509e
   languageName: node
   linkType: hard
 
@@ -562,12 +562,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.15.17":
-  version: 22.15.17
-  resolution: "@types/node@npm:22.15.17"
+"@types/node@npm:*, @types/node@npm:22.15.18":
+  version: 22.15.18
+  resolution: "@types/node@npm:22.15.18"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/fb92aa10b628683c5b965749f955bc2322485ecb0ea6c2f4cae5f2c7537a16834607e67083a9e9281faaae8d7dee9ada8d6a5c0de9a52c17d82912ef00c0fdd4
+  checksum: 10c0/e23178c568e2dc6b93b6aa3b8dfb45f9556e527918c947fe7406a4c92d2184c7396558912400c3b1b8d0fa952ec63819aca2b8e4d3545455fc6f1e9623e09ca6
   languageName: node
   linkType: hard
 
@@ -1146,7 +1146,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "discord-status-webhook@workspace:."
   dependencies:
-    "@keyv/sqlite": "npm:^4.0.3"
+    "@keyv/sqlite": "npm:^4.0.4"
     "@sapphire/duration": "npm:^1.2.0"
     "@sapphire/eslint-config": "npm:^5.0.6"
     "@sapphire/ts-config": "npm:^5.0.1"
@@ -1155,7 +1155,7 @@ __metadata:
     "@skyra/logger": "npm:^2.0.3"
     "@skyra/safe-fetch": "npm:^1.1.3"
     "@types/luxon": "npm:^3.6.2"
-    "@types/node": "npm:22.15.17"
+    "@types/node": "npm:22.15.18"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     discord.js: "npm:^14.19.3"
