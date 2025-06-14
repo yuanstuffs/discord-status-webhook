@@ -562,12 +562,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.15.30":
-  version: 22.15.30
-  resolution: "@types/node@npm:22.15.30"
+"@types/node@npm:*, @types/node@npm:22.15.31":
+  version: 22.15.31
+  resolution: "@types/node@npm:22.15.31"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/ca330ac0e7fd502686d6df115fcc606aba46fd334220f749bbba2f639accdadcb23f7900603ceccdc8240be736739cad5c0b87c0fa92c9255a4dff245f07d664
+  checksum: 10c0/ef7d5dc890da41cfd554d35ab8998bc18be9e3a0caa642e720599ac4410a94a4879766e52b3c9cafa06c66b7b8aebdc51f322cf67df23a6489927890196a316d
   languageName: node
   linkType: hard
 
@@ -1155,18 +1155,18 @@ __metadata:
     "@skyra/logger": "npm:^2.0.4"
     "@skyra/safe-fetch": "npm:^1.1.4"
     "@types/luxon": "npm:^3.6.2"
-    "@types/node": "npm:22.15.30"
+    "@types/node": "npm:22.15.31"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     discord.js: "npm:^14.19.3"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.1.5"
     eslint-plugin-prettier: "npm:^5.4.1"
-    keyv: "npm:^5.3.3"
+    keyv: "npm:^5.3.4"
     luxon: "npm:^3.6.1"
     prettier: "npm:^3.5.3"
     rimraf: "npm:^6.0.1"
-    tsx: "npm:^4.19.4"
+    tsx: "npm:^4.20.3"
     typescript: "npm:^5.5.2"
   languageName: unknown
   linkType: soft
@@ -2099,12 +2099,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyv@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "keyv@npm:5.3.3"
+"keyv@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "keyv@npm:5.3.4"
   dependencies:
     "@keyv/serialize": "npm:^1.0.3"
-  checksum: 10c0/6b9064d061784e80a5dc500453b03cacb099f06fddd0346063519371d563a66771237e04467f3387b60d8a33a3c99864288991274921fb1338c6adf638574924
+  checksum: 10c0/d6f62dceca7361986d800943749ad41e907cf87676aa4c259ffe09379a46c6606f532513744db0479a61f0732c12eaf5cd2dfc39427fad4db0d7e4955627c503
   languageName: node
   linkType: hard
 
@@ -3177,9 +3177,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.19.4":
-  version: 4.19.4
-  resolution: "tsx@npm:4.19.4"
+"tsx@npm:^4.20.3":
+  version: 4.20.3
+  resolution: "tsx@npm:4.20.3"
   dependencies:
     esbuild: "npm:~0.25.0"
     fsevents: "npm:~2.3.3"
@@ -3189,7 +3189,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 10c0/f7b8d44362343fbde1f2ecc9832d243a450e1168dd09702a545ebe5f699aa6912e45b431a54b885466db414cceda48e5067b36d182027c43b2c02a4f99d8721e
+  checksum: 10c0/6ff0d91ed046ec743fac7ed60a07f3c025e5b71a5aaf58f3d2a6b45e4db114c83e59ebbb078c8e079e48d3730b944a02bc0de87695088aef4ec8bbc705dc791b
   languageName: node
   linkType: hard
 
