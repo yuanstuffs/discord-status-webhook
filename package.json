@@ -26,15 +26,15 @@
     "@skyra/logger": "^2.0.4",
     "@skyra/safe-fetch": "^1.1.4",
     "discord.js": "^14.19.3",
-    "keyv": "^5.3.3",
+    "keyv": "^5.3.4",
     "luxon": "^3.6.1",
-    "tsx": "^4.19.4"
+    "tsx": "^4.20.3"
   },
   "devDependencies": {
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.6.2",
-    "@types/node": "22.15.30",
+    "@types/node": "22.15.31",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
