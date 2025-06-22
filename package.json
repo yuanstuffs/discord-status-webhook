@@ -19,7 +19,7 @@
     "scripts:setdata": "node --import tsx scripts/setData.mts"
   },
   "dependencies": {
-    "@keyv/sqlite": "^4.0.4",
+    "@keyv/sqlite": "^4.0.5",
     "@sapphire/duration": "^1.2.0",
     "@sapphire/utilities": "^3.18.2",
     "@skyra/env-utilities": "^2.0.1",
