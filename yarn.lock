@@ -562,12 +562,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.15.32":
-  version: 22.15.32
-  resolution: "@types/node@npm:22.15.32"
+"@types/node@npm:*, @types/node@npm:22.15.34":
+  version: 22.15.34
+  resolution: "@types/node@npm:22.15.34"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/63a2fa52adf1134d1b3bee8b1862d4b8e4550fffc190551068d3d41a41d9e5c0c8f1cb81faa18767b260637360f662115c26c5e4e7718868ead40c4a57cbc0e3
+  checksum: 10c0/fb6a6b36daaa1b484aaba3d33b4d1e7b37ea993e29f20b7a676affa76ed6ff6acd2ded4d5003469bc8dbc815b3d224533b4560896037ef6d5b5d552721ab7d57
   languageName: node
   linkType: hard
 
@@ -1155,25 +1155,25 @@ __metadata:
     "@skyra/logger": "npm:^2.0.4"
     "@skyra/safe-fetch": "npm:^1.1.4"
     "@types/luxon": "npm:^3.6.2"
-    "@types/node": "npm:22.15.32"
+    "@types/node": "npm:22.15.34"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
-    discord.js: "npm:^14.20.0"
+    discord.js: "npm:^14.21.0"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.1.5"
-    eslint-plugin-prettier: "npm:^5.5.0"
+    eslint-plugin-prettier: "npm:^5.5.1"
     keyv: "npm:^5.3.4"
     luxon: "npm:^3.6.1"
-    prettier: "npm:^3.5.3"
+    prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     tsx: "npm:^4.20.3"
     typescript: "npm:^5.5.2"
   languageName: unknown
   linkType: soft
 
-"discord.js@npm:^14.20.0":
-  version: 14.20.0
-  resolution: "discord.js@npm:14.20.0"
+"discord.js@npm:^14.21.0":
+  version: 14.21.0
+  resolution: "discord.js@npm:14.21.0"
   dependencies:
     "@discordjs/builders": "npm:^1.11.2"
     "@discordjs/collection": "npm:1.5.3"
@@ -1188,7 +1188,7 @@ __metadata:
     magic-bytes.js: "npm:^1.10.0"
     tslib: "npm:^2.6.3"
     undici: "npm:6.21.3"
-  checksum: 10c0/78c847f5cc86579a881be73d9d7642aee0ece6c17157dbc13efbd89c5e42ed82fabb4468a55afb723a7e269104929dd57da2d40846fb0d8159ceff986f7baffe
+  checksum: 10c0/35d89b66ec427ecc972f9141540774af6c6a5bf177bdbb5c948efbf838ec074204fb4610227f0f8405336d66706ba17f7280aedf00cccd858ef5c1048d861b34
   languageName: node
   linkType: hard
 
@@ -1374,9 +1374,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.4.0, eslint-plugin-prettier@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "eslint-plugin-prettier@npm:5.5.0"
+"eslint-plugin-prettier@npm:^5.4.0, eslint-plugin-prettier@npm:^5.5.1":
+  version: 5.5.1
+  resolution: "eslint-plugin-prettier@npm:5.5.1"
   dependencies:
     prettier-linter-helpers: "npm:^1.0.0"
     synckit: "npm:^0.11.7"
@@ -1390,7 +1390,7 @@ __metadata:
       optional: true
     eslint-config-prettier:
       optional: true
-  checksum: 10c0/d739940d5f5ea9b4c3a52836b24907b273a46909cdd1def5526f8934e54082fe5aac13512eb2c27d538ca79e16916ca54c651e3372aa53b7d4297afb4c156d47
+  checksum: 10c0/6ed93faa7d885af2a987d732f7e716e7aaba55e2da2b091e1b16bacf68425bffe91d784803597bd3f3e6201499fabb89ae28a51ac3986659a46e55e729ed2d55
   languageName: node
   linkType: hard
 
@@ -2697,12 +2697,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "prettier@npm:3.5.3"
+"prettier@npm:^3.5.3, prettier@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/3880cb90b9dc0635819ab52ff571518c35bd7f15a6e80a2054c05dbc8a3aa6e74f135519e91197de63705bcb38388ded7e7230e2178432a1468005406238b877
+  checksum: 10c0/488cb2f2b99ec13da1e50074912870217c11edaddedeadc649b1244c749d15ba94e846423d062e2c4c9ae683e2d65f754de28889ba06e697ac4f988d44f45812
   languageName: node
   linkType: hard
 
