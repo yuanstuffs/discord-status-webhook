@@ -562,12 +562,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.16.0":
-  version: 22.16.0
-  resolution: "@types/node@npm:22.16.0"
+"@types/node@npm:*, @types/node@npm:22.16.3":
+  version: 22.16.3
+  resolution: "@types/node@npm:22.16.3"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/6219b521062f6c38d4d85ebd25807bd7f2bc703a5acba24e2c6716938d9d6cefd6fafd7b5156f61580eb58a0d82e8921751b778655675389631d813e5f261c03
+  checksum: 10c0/ea6829d0691713e216c15a767f87e412fa0f45c7ed4d49419098d967467e20a5dcdf66fee024e314deab2779f7e5282e1839ee918e845be27f14179247ec947a
   languageName: node
   linkType: hard
 
@@ -1155,7 +1155,7 @@ __metadata:
     "@skyra/logger": "npm:^2.0.4"
     "@skyra/safe-fetch": "npm:^1.1.4"
     "@types/luxon": "npm:^3.6.2"
-    "@types/node": "npm:22.16.0"
+    "@types/node": "npm:22.16.3"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     discord.js: "npm:^14.21.0"
@@ -1163,7 +1163,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.5"
     eslint-plugin-prettier: "npm:^5.5.1"
     keyv: "npm:^5.3.4"
-    luxon: "npm:^3.6.1"
+    luxon: "npm:^3.7.1"
     prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     tsx: "npm:^4.20.3"
@@ -2171,10 +2171,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.6.1":
-  version: 3.6.1
-  resolution: "luxon@npm:3.6.1"
-  checksum: 10c0/906d57a9dc4d1de9383f2e9223e378c298607c1b4d17b6657b836a3cd120feb1c1de3b5d06d846a3417e1ca764de8476e8c23b3cd4083b5cdb870adcb06a99d5
+"luxon@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "luxon@npm:3.7.1"
+  checksum: 10c0/f83bc23a4c09da9111bc2510d2f5346e1ced4938379ebff13e308fece2ea852eb6e8b9ed8053b8d82e0fce05d5dd46e4cd64d8831ca04cfe32c0954b6f087258
   languageName: node
   linkType: hard
 
