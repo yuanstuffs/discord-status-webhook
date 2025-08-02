@@ -26,7 +26,7 @@
     "@skyra/logger": "^2.0.4",
     "@skyra/safe-fetch": "^1.1.4",
     "discord.js": "^14.21.0",
-    "keyv": "^5.4.0",
+    "keyv": "^5.5.0",
     "luxon": "^3.7.1",
     "tsx": "^4.20.3"
   },
