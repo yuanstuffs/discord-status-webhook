@@ -28,13 +28,13 @@
     "discord.js": "^14.21.0",
     "keyv": "^5.5.0",
     "luxon": "^3.7.1",
-    "tsx": "^4.20.3"
+    "tsx": "^4.20.4"
   },
   "devDependencies": {
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/ts-config": "^5.0.1",
     "@types/luxon": "^3.7.1",
-    "@types/node": "22.17.1",
+    "@types/node": "22.17.2",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
