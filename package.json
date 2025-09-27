@@ -28,7 +28,7 @@
     "discord.js": "^14.22.1",
     "keyv": "^5.5.2",
     "luxon": "^3.7.2",
-    "tsx": "^4.20.5"
+    "tsx": "^4.20.6"
   },
   "devDependencies": {
     "@sapphire/eslint-config": "^5.0.6",
@@ -55,5 +55,5 @@
     "yuansheng <yuansheng1515@icloud.com>"
   ],
   "license": "MIT",
-  "packageManager": "yarn@4.10.0"
+  "packageManager": "yarn@4.10.3"
 }
