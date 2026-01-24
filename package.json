@@ -19,14 +19,14 @@
     "scripts:setdata": "node --import tsx scripts/setData.mts"
   },
   "dependencies": {
-    "@keyv/sqlite": "^4.0.6",
+    "@keyv/sqlite": "^4.0.8",
     "@sapphire/duration": "^1.2.0",
     "@sapphire/utilities": "^3.18.2",
     "@skyra/env-utilities": "^2.0.1",
     "@skyra/logger": "^2.0.4",
     "@skyra/safe-fetch": "^1.1.4",
     "discord.js": "^14.25.1",
-    "keyv": "^5.5.5",
+    "keyv": "^5.6.0",
     "luxon": "^3.7.2",
     "tsx": "^4.21.0"
   },
@@ -40,7 +40,7 @@
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "typescript": "^5.5.2"
   },
