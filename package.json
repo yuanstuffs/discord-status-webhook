@@ -25,7 +25,7 @@
     "@skyra/env-utilities": "^2.0.1",
     "@skyra/logger": "^2.0.4",
     "@skyra/safe-fetch": "^1.1.4",
-    "discord.js": "^14.25.1",
+    "discord.js": "^14.26.2",
     "keyv": "^5.6.0",
     "luxon": "^3.7.2",
     "tsx": "^4.21.0"
@@ -34,7 +34,7 @@
     "@sapphire/eslint-config": "^5.0.6",
     "@sapphire/ts-config": "^5.0.3",
     "@types/luxon": "^3.7.1",
-    "@types/node": "22.19.15",
+    "@types/node": "22.19.17",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
