@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 9
   cacheKey: 10c0
 
 "@discordjs/builders@npm:^1.14.1":
@@ -1178,22 +1178,22 @@ __metadata:
     "@types/node": "npm:22.19.17"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
-    discord.js: "npm:^14.26.2"
+    discord.js: "npm:^14.26.3"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-prettier: "npm:^5.5.5"
     keyv: "npm:^5.6.0"
     luxon: "npm:^3.7.2"
-    prettier: "npm:^3.8.2"
+    prettier: "npm:^3.8.3"
     rimraf: "npm:^6.1.3"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.5.2"
   languageName: unknown
   linkType: soft
 
-"discord.js@npm:^14.26.2":
-  version: 14.26.2
-  resolution: "discord.js@npm:14.26.2"
+"discord.js@npm:^14.26.3":
+  version: 14.26.3
+  resolution: "discord.js@npm:14.26.3"
   dependencies:
     "@discordjs/builders": "npm:^1.14.1"
     "@discordjs/collection": "npm:1.5.3"
@@ -1208,7 +1208,7 @@ __metadata:
     magic-bytes.js: "npm:^1.13.0"
     tslib: "npm:^2.6.3"
     undici: "npm:6.24.1"
-  checksum: 10c0/08592dad347cf9c6b1db4ebfd6f34d51eb0bd33ffbd9288b54981fc80255154194de306ca37d62b60646c785c329ecb285dc762a4ba3ce2cf8cf2ecf2bff6e68
+  checksum: 10c0/a358e8714bdc6a0d63b0e9246cd934e4ab620987b3e3bb55c1d3bc3ae298d4ec0c16268d380f3084d9338e99df56bce684dd50c22d090693acdcf91fa1b1c370
   languageName: node
   linkType: hard
 
@@ -2706,21 +2706,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.5.3":
-  version: 3.8.1
-  resolution: "prettier@npm:3.8.1"
+"prettier@npm:^3.5.3, prettier@npm:^3.8.3":
+  version: 3.8.3
+  resolution: "prettier@npm:3.8.3"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/33169b594009e48f570471271be7eac7cdcf88a209eed39ac3b8d6d78984039bfa9132f82b7e6ba3b06711f3bfe0222a62a1bfb87c43f50c25a83df1b78a2c42
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^3.8.2":
-  version: 3.8.2
-  resolution: "prettier@npm:3.8.2"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10c0/2d64bd01d269c8dd6d8c423a2a2e1fb88230a53aac523204b327de40059ccf8bd8e6fe70b8ce6154b97ed4442e9fd878504ff8a5330f3a4f64bd13d1576f7652
+  checksum: 10c0/754816fd7593eb80f6376d7476d463e832c38a12f32775a82683adb6e35b772b1f484d65f19401507b983a8c8a7cd5a4a9f12006bd56491e8f35503473f77473
   languageName: node
   linkType: hard
 
