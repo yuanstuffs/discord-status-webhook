@@ -562,10 +562,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:^3.7.3":
-  version: 3.7.3
-  resolution: "@types/luxon@npm:3.7.3"
-  checksum: 10c0/eae897fcadc5ff925a590c1d4dde3becf4a2520e26c066a7552905bc8a537b7b779aa081e3d403031fd8dd705810bc41b6f353bdc4c11e19e26ecc481e1d3ec3
+"@types/luxon@npm:^3.7.4":
+  version: 3.7.4
+  resolution: "@types/luxon@npm:3.7.4"
+  checksum: 10c0/f3cf9c0eccb81e8f0a3cf840927f2dac82fca31edc0888a99965ecd6ba4ba995ccdff34d6dd8e13aed9f57765defee5b3e41739f81a5c939ace6764156dff79a
   languageName: node
   linkType: hard
 
@@ -1167,7 +1167,7 @@ __metadata:
     "@skyra/env-utilities": "npm:^2.0.1"
     "@skyra/logger": "npm:^2.0.4"
     "@skyra/safe-fetch": "npm:^1.1.4"
-    "@types/luxon": "npm:^3.7.3"
+    "@types/luxon": "npm:^3.7.4"
     "@types/node": "npm:22.20.1"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
@@ -1179,7 +1179,7 @@ __metadata:
     luxon: "npm:^3.7.2"
     prettier: "npm:^3.9.6"
     rimraf: "npm:^6.1.3"
-    tsx: "npm:^4.23.9"
+    tsx: "npm:^4.23.12"
     typescript: "npm:^5.5.2"
   languageName: unknown
   linkType: soft
@@ -3163,9 +3163,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.23.9":
-  version: 4.23.11
-  resolution: "tsx@npm:4.23.11"
+"tsx@npm:^4.23.12":
+  version: 4.23.12
+  resolution: "tsx@npm:4.23.12"
   dependencies:
     esbuild: "npm:~0.28.0"
     fsevents: "npm:~2.3.3"
@@ -3174,7 +3174,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 10c0/6f72cfea4aec04ab17450b0b6764f85839f2f8b207255a86b3c704e91df5b68d550a93b2975d3916b996f0b651999e7bdbc71ef60abd83563b60f53bcd3bf95a
+  checksum: 10c0/cdd7f03754021fb337c13839f25f5f5edee01ed12e1e176da50cc34bc5c5fc4e7b533aeba89127055be969d4ff292c6accdb6b9d977ed022c524349eca6ff841
   languageName: node
   linkType: hard
 
